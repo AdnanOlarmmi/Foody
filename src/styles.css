@@ -9,6 +9,12 @@
   font-family: poppins;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -44,6 +50,13 @@ nav {
 
 .nav__menu li {
   cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s ease-in-out;
+}
+
+.nav__menu li:hover {
+  cursor: pointer;
+  border-bottom: 2px solid white;
 }
 
 a {
@@ -57,15 +70,24 @@ li {
 }
 
 /* footer */
-.footer__container {
+
+footer {
+  margin-top: auto;
   font-family: 'Poppins', sans-serif;
-  background-color: blue;
+  background-color: rgb(32, 32, 32);
   display: flex;
   align-items: center;
   justify-content: space-around;
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer a {
+  font-weight: bold;
 }
 
 .creator {
   font-weight: 400;
+  color: red;
 }
  
