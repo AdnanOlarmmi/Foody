@@ -1,0 +1,36 @@
+{
+  "name": "capstone-ii",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "jest --coverage",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdnanOlarmmi/Capstone-II.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdnanOlarmmi/Capstone-II/issues"
+  },
+  "homepage": "https://github.com/AdnanOlarmmi/Capstone-II#readme"
+}
