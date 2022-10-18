@@ -43,6 +43,17 @@ nav {
   font-size: 1.5rem;
 }
 
+.item_number {
+  border-radius: 50%;
+  background-color: white;
+  color: red;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  top: 2px;
+  right: 240px;
+  
+}
+
 .nav__menu {
   display: flex;
   gap: 1rem;
