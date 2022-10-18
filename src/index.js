@@ -1,10 +1,34 @@
 import './styles.css';
-import likeIcon from './images/likeIcon.svg'
-import foodBaseUrl from './modules/config.js';
 import renderFoodItems from './modules/renderFoodItems.js'
+import renderLikes from './modules/renderLikes.js';
 
-console.log(foodBaseUrl);
-renderFoodItems();
+import {likeApiEndPoint} from './modules/config.js'
 
-document.querySelector('.sam').src = likeIcon;
+import addLikes from './modules/addLikes.js'
+
+const foodContainerEl = document.querySelector('main');
+
+
+
+const runRenderLikes = async () => {
+await renderFoodItems();
+renderLikes();
+}
+runRenderLikes();
+foodContainerEl.addEventListener('click',async (e)=>{
+  if(e.target.className==='icon__like') {
+    console.log(e.target.parentNode.id);
+    await addLikes(e.target.parentNode.id);
+    renderLikes();
+  }
+})
+
+
+    
+
+
+
+
+
+
 

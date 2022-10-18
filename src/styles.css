@@ -87,6 +87,7 @@ li {
   width: 1.5rem; 
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  color: transparent
 }
 
 .icon__like:hover {
@@ -101,20 +102,20 @@ li {
 img {
   object-fit: cover;
   border-radius: 20px;
-  width: 20vw;
-  height: 40vw;
+  width: 40vw;
+  height: 50vw;
   margin: 0.7rem;
 }
 
 .food__icon {
-  width: 120%;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
 
 .food__item {
   align-items: center;
-  width: 40vw;
+  width: 70vw;
   justify-content: center;
   border-radius: 2rem;
   padding: 2rem;
@@ -161,16 +162,16 @@ button:hover {
 }
 
 button:active {
-  scale: 0.95;
+  scale: 0.85;
 }
 
 .foods__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1.75rem;
-  margin-inline: auto;
+  margin: 0 auto;
   padding: 1rem;
+
 }
 /* footer */
 
@@ -197,8 +198,23 @@ footer a {
 @media only screen and (min-width: 768px) {
   .foods__container {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .food__item {
+    width: 40vw
+  }
+
+  img {
+    width: 25vw;
+    height: 40vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .foods__container {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
   }
 
   .food__item {
@@ -206,12 +222,9 @@ footer a {
   }
 
   img {
-    width: 10vw;
+    width: 12.5vw;
     height: 20vw;
   }
-
-
-
 }
 
  

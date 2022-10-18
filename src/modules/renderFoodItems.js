@@ -1,13 +1,12 @@
-import foodBaseUrl from "./config.js";
+import {foodBaseUrl} from "./config.js";
 
 const foodContainerEl = document.querySelector('.foods__container');
-// const addMsgEl = document.querySelector('.leaderboard__add-msg');
 
 const renderFoodItems = async () => {
   let markup = '';
+  const foodId = []
  
    foodBaseUrl.forEach( async (item) => {
-    console.log(item)
     try {
         const res = await fetch(item);
         let data = await res.json();
@@ -20,7 +19,11 @@ const renderFoodItems = async () => {
             <section class="food__item flex-column">
             <div class="food__icon flex-row">
             <span class="icon__hot">HOT</span>
-            <span class="icon__like"></span></div>
+            <span class="icon" id=${item.idMeal}>
+            <span class="icon__like">fffff</span>
+            <span class="like__count"></span>
+            </span>
+            </div>
             <div class="food__image">
             <img src="${item.strMealThumb}" alt="asdf"></div>
             <p class="food__name">${item.strMeal}</p>
@@ -29,11 +32,6 @@ const renderFoodItems = async () => {
             </section>`
             foodContainerEl.innerHTML = markup;
         });
-       
-        // addMsgEl.innerHTML = 'Scores Updated Successfully';
-        // setTimeout(() => {
-        //   addMsgEl.innerHTML = '';
-        // }, 2000);
       } catch (err) {
         foodContainerEl.innerHTML = err; 
       }
