@@ -8,21 +8,10 @@ const likeApiEndPoint = `${likeURL}/capstoneApi/apps/${likeKey}/likes`;
 
 const foodURL = 'https://www.themealdb.com/api/json/v1/1/search.php?s';
 
-
-
-
-
-
 const foodBaseUrl = []
-
-
 
 foodItems.forEach((item) => {
     foodBaseUrl.push(`${foodURL}=${item}`)
 })
-
-
-
-
 
 export {foodBaseUrl, likeApiEndPoint};

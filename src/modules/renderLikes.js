@@ -2,8 +2,6 @@ import {likeApiEndPoint} from './config.js'
 
 const likeCountEl = document.getElementsByClassName('like__count');
 
-//getrequest
-
 const renderLikes = async () => {
     try {
         const res = await fetch(likeApiEndPoint);
@@ -24,7 +22,7 @@ const renderLikes = async () => {
         })
         
       } catch (err) {
-        console.log('bad')
+        console.log(err)
       }  
 }
 

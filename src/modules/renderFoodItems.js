@@ -4,7 +4,6 @@ const foodContainerEl = document.querySelector('.foods__container');
 
 const renderFoodItems = async () => {
   let markup = '';
-  const foodId = []
  
    foodBaseUrl.forEach( async (item) => {
     try {
@@ -36,8 +35,6 @@ const renderFoodItems = async () => {
         foodContainerEl.innerHTML = err; 
       }
   })
-
 };
-
 
 export default renderFoodItems;

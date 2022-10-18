@@ -1,7 +1,5 @@
 import {likeApiEndPoint} from './config.js'
-import renderLikes from './renderLikes.js';
 
-//post request
 const addLikes = async (id) => {
    const like = {
     item_id: id,
@@ -24,23 +22,5 @@ const addLikes = async (id) => {
   }
 
 }
-
-// try {
-//     const res = await fetch(likeApiEndPoint, {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(scoreOBJ),
-//     });
-//     const data = await res.json();
-//     if (!res.ok) {
-//       addMsgEl.innerHTML = 'Not Successful';
-//     }
-//     addMsgEl.innerHTML = data.result;
-//     formEl.reset();
-//   } catch (err) {
-//     addMsgEl.innerHTML = 'Not Successful';
-//   }
 
 export default addLikes;

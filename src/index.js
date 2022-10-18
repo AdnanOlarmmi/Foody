@@ -2,13 +2,9 @@ import './styles.css';
 import renderFoodItems from './modules/renderFoodItems.js'
 import renderLikes from './modules/renderLikes.js';
 
-import {likeApiEndPoint} from './modules/config.js'
-
 import addLikes from './modules/addLikes.js'
 
 const foodContainerEl = document.querySelector('main');
-
-
 
 const runRenderLikes = async () => {
 await renderFoodItems();
