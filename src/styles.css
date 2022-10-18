@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: poppins;
+  font-family: poppins, sans-serif;
 }
 
 html {
@@ -31,15 +31,61 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
-  padding: 1rem 1rem;
+  flex-direction: column;
+  padding: 1rem 0.2rem;
+  gap: 2rem;
   background-color: red;
   color: white;
   font-weight: 600;
-  align-items: center;
+  align-items: flex-start;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  width: 30vw;
+  left: -30vw;
+  height: 100%;
+  z-index: 1;
 }
 
-.brand__name b{
+.open {
+  left: 0;
+}
+
+.hamburger {
+  position: absolute;
+  top: 1rem;
+  right: -3rem;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  background-color: black;
+  margin: 0.4rem 0;
+  height: 0.4rem;
+  width: 2.1rem;
+  border-radius: 0.15rem;
+  transition: 0.3s all ease-in-out;
+  position: relative;
+}
+
+.change.first-bar {
+  top: 0.8rem;
+  transform: rotate(45deg);
+}
+
+.change.second-bar {
+  opacity: 0;
+}
+
+.change.third-bar {
+  bottom: 0.755rem;
+  transform: rotate(-45deg);
+}
+
+.brand__name b {
   font-size: 1.5rem;
 }
 
@@ -49,14 +95,19 @@ nav {
   color: red;
   padding: 0.1rem 0.5rem;
   position: absolute;
-  top: 2px;
-  right: 240px;
-  
+  top: 9rem;
+  left: 4rem;
 }
 
 .nav__menu {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 3rem;
+  margin-left: 1rem;
+}
+
+li {
+  list-style: none;
 }
 
 .nav__menu li {
@@ -75,11 +126,6 @@ a {
   color: white;
 }
 
-li {
-  list-style: none;
-  font-family: poppins;
-}
-
 .icon__hot {
   padding: 0.7rem 0.6rem;
   background-color: #00a950;
@@ -95,10 +141,10 @@ li {
   opacity: 0.15;
   background-repeat: no-repeat;
   height: 1.5rem;
-  width: 1.5rem; 
+  width: 1.5rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  color: transparent
+  color: transparent;
 }
 
 .icon__like:hover {
@@ -136,12 +182,11 @@ img {
 }
 
 .food__item:hover {
-   border-radius: 2rem;
-   box-shadow: 0.05rem 0.05rem 1rem rgba(185, 184, 184, 0.6);
+  border-radius: 2rem;
+  box-shadow: 0.05rem 0.05rem 1rem rgba(185, 184, 184, 0.6);
 }
 
 .food__image {
-
   text-align: center;
   cursor: pointer;
 }
@@ -154,20 +199,20 @@ img {
 }
 
 button {
-	background-color:white;
-	border-radius: 2rem;
-	border: 1px solid black;
-	cursor: pointer;
-	color: black;
-	font-size: 0.75rem;
-	font-weight: bold;
-	padding: 8px 18px;
+  background-color: white;
+  border-radius: 2rem;
+  border: 1px solid black;
+  cursor: pointer;
+  color: black;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 8px 18px;
   transition: 0.3s all ease-in-out;
   margin-top: 0.5rem;
 }
 
 button:hover {
-	background-color: red;
+  background-color: red;
   color: white;
   border: 1px solid transparent;
 }
@@ -182,8 +227,8 @@ button:active {
   gap: 1.75rem;
   margin: 0 auto;
   padding: 1rem;
-
 }
+
 /* footer */
 
 footer {
@@ -207,13 +252,41 @@ footer a {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: static;
+    width: 100vw;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .item_number {
+    top: 0.16rem;
+    left: 29.5rem;
+  }
+
   .foods__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
   .food__item {
-    width: 40vw
+    width: 40vw;
   }
 
   img {
@@ -229,7 +302,11 @@ footer a {
   }
 
   .food__item {
-    width: 20vw
+    width: 20vw;
+  }
+
+  .item_number {
+    left: 57.5rem;
   }
 
   img {
@@ -237,5 +314,3 @@ footer a {
     height: 20vw;
   }
 }
-
- 

@@ -1,7 +1,5 @@
-import foodItems from "./foodItems.js";
+import foodItems from './foodItems.js';
 
-const itemsCounter = () => {
-    return foodItems.length;
-}
+const itemsCounter = () => foodItems.length;
 
 export default itemsCounter;
