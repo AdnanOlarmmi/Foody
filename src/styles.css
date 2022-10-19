@@ -88,16 +88,11 @@ li {
 
 .model__content {
   background-color: rgb(255,255,255);
-  width: 100%;
-  max-width: 40rem;
+  width: 80vw;
   height: 95vh;
   margin: 1rem auto;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .model__content::-webkit-scrollbar {
@@ -187,7 +182,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 27rem;
+  width: 70rem;
   margin: auto;
 }
 
