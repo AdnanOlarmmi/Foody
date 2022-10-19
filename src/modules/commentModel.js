@@ -84,10 +84,52 @@ const createCommentEl = () => {
   return postUl;
 }
 
+const createformEl = () => {
+  const formDiv = document.createElement('div');
+  const h3El = document.createElement('h3');
+  const formEl = document.createElement('form');
+  const input = document.createElement('input');
+  const textarea = document.createElement('textarea');
+  const button = document.createElement('button');
+  const divMsg = document.createElement('div');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  
+  formDiv.classList.add('model__form');
+  h3El.classList.add('form__title');
+  formEl.classList.add('comment__form');
+  input.classList.add('comment__name');
+  textarea.classList.add('comment');
+  button.classList.add('form__btn');
+  divMsg.classList.add('message');
+  p1.classList.add('success');
+  p2.classList.add('danger');
+  
+  input.setAttribute('type', 'text');
+  input.setAttribute('placeholder', 'Your name');
+  textarea.setAttribute('placeholder', 'insights');
+  textarea.setAttribute('cols', '20');
+  textarea.setAttribute('rows', '10');
+  button.setAttribute('type', 'submit');
+  
+  h3El.innerText = 'Add a comment';
+  button.innerText = 'Comment';
+  p1.innerText = 'Form successfully submited';
+  p2.innerText = 'Please fill in the form'
+  
+  divMsg.append(p1, p2);
+  formEl.append(input, textarea, button, divMsg);
+  formDiv.append(h3El, formEl);
+  
+  return formDiv;
+}
+
+
 modelContent.append(
   createXBtn(),
   createItemDetailsEl(),
-  createCommentEl()
+  createCommentEl(),
+  createformEl()
 );
 
 
