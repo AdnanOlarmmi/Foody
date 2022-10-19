@@ -74,13 +74,13 @@ const createItemDetailsEl = () => {
 
 const createCommentEl = () => {
   const postUl = document.createElement('ul');
-  // const postH2 = document.createElement('h2');
+  const postH2 = document.createElement('h2');
   
   postUl.classList.add('post__comment');
-  // postH2.classList.add('post__comment__title');
+  postH2.classList.add('post__comment__title');
   
-  // postH2.innerText = 'Comments';
-  // postUl.append;
+  postH2.innerText = 'Comments';
+  postUl.append(postH2);
   return postUl;
 }
 

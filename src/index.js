@@ -1,11 +1,14 @@
 import './styles.css';
 import {formStatusMsg, modelWindow} from './modules/commentModel.js'
 // import commentCounter from './modules/countComment.js'
-// import { listComments, commentsContainer } from './modules/displayComments.js'
-// import { getComments, addComments } from './modules/api.js'
+import { listComments, commentsContainer } from './modules/displayComments.js'
+import {getComments} from './modules/api.js'
 // import {formStatusMsg} from './modules/commentModel.js'
 
-
+window.onload = async () => {
+  listComments(await getComments());
+  // commentCounter(await getComments())
+}
   
   
   
