@@ -2,7 +2,7 @@ import './styles.css';
 import {formStatusMsg, modelWindow} from './modules/commentModel.js'
 // import commentCounter from './modules/countComment.js'
 import { listComments, commentsContainer } from './modules/displayComments.js'
-import {getComments} from './modules/api.js'
+import {getComments, addComments} from './modules/api.js'
 // import {formStatusMsg} from './modules/commentModel.js'
 
 window.onload = async () => {
@@ -10,6 +10,19 @@ window.onload = async () => {
   // commentCounter(await getComments())
 }
   
+
+const modelCommentForm = document.querySelector('.comment__form');
+modelCommentForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const values = {
+    item_id: "item1",
+    username: document.querySelector('.comment__name').value,
+    comment: document.querySelector('.comment').value
+  };
+  formStatusMsg()
+  modelCommentForm.reset();
+  addComments(values)
+});
   
   
   

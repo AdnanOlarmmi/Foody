@@ -156,4 +156,24 @@ export const modelWindow = () => {
 }
 modelWindow()
 
+const inputName = document.querySelector('.comment__name')
+const inputComment = document.querySelector('.comment')
+const successMsg = document.querySelector('.success');
+const dangerMsg = document.querySelector('.danger');
 
+export const formStatusMsg = () => {
+  if(inputName.value === '' || inputComment.value === '') {
+    dangerMsg.style.display = 'block';
+  } else {
+    setTimeout(() => {
+      inputName.value = '';
+      inputComment.value === '';
+    }, 2000)
+    successMsg.style.display = 'block';
+  }
+
+  setTimeout(() => {
+    dangerMsg.style.display = 'none';
+    successMsg.style.display = 'none';
+  }, 1000)
+}
