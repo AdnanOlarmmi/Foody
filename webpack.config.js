@@ -1,4 +1,4 @@
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -26,7 +26,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new FaviconsWebpackPlugin('./src/images/icon.svg')
+    new FaviconsWebpackPlugin('./src/images/icon.svg'),
   ],
   output: {
     filename: '[name].bundle.js',

@@ -46,6 +46,10 @@ nav {
   z-index: 1;
 }
 
+.nav__item {
+  width: max-content;
+}
+
 .open {
   left: 0;
 }
@@ -140,11 +144,10 @@ a {
   background-image: url('./images/hoverlikeIcon.svg');
   opacity: 0.15;
   background-repeat: no-repeat;
-  height: 1.5rem;
-  width: 1.5rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   color: transparent;
+  padding: 0.1rem 1rem;
 }
 
 .icon__like:hover {
@@ -290,6 +293,11 @@ footer a {
     width: 40vw;
   }
 
+  .shift .food__item {
+    margin-left: 0;
+    width: 40vw;
+  }
+
   img {
     width: 25vw;
     height: 40vw;
@@ -303,6 +311,10 @@ footer a {
   }
 
   .food__item {
+    width: 20vw;
+  }
+
+  .shift .food__item {
     width: 20vw;
   }
 

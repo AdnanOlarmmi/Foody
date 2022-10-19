@@ -13,14 +13,14 @@ const itemsNumberEl = document.querySelector('.item_number');
 itemsNumberEl.innerHTML = itemsCounter();
 
 const toggleNav = () => {
-    hamburgerEl.addEventListener('click', () => {
-        navEl.classList.toggle('open');
-        for(let item of barsEl) {
-            item.classList.toggle('change');
-        }
-        foodContainerEl.classList.toggle('shift');
-    })
-}
+  hamburgerEl.addEventListener('click', () => {
+    navEl.classList.toggle('open');
+    [...barsEl].forEach((item) => {
+      item.classList.toggle('change');
+    });
+    foodContainerEl.classList.toggle('shift');
+  });
+};
 
 foodContainerEl.addEventListener('click', async (e) => {
   if (e.target.className === 'icon__like') {
@@ -32,5 +32,3 @@ foodContainerEl.addEventListener('click', async (e) => {
 renderLikes();
 renderFoodItems();
 toggleNav();
-
-

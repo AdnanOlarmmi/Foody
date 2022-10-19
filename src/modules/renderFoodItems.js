@@ -19,7 +19,7 @@ const renderFoodItems = async () => {
             <div class="food__icon flex-row">
             <span class="icon__hot">HOT</span>
             <span class="icon" id=${item.idMeal}>
-            <span class="icon__like">fffff</span>
+            <span class="icon__like"></span>
             <span class="like__count"></span>
             </span>
             </div>
