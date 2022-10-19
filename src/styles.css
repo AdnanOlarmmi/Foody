@@ -37,11 +37,11 @@ nav {
   background-color: red;
   color: white;
   font-weight: 600;
-  align-items: flex-start;
+  align-items: center;
   transition: all 0.3s ease-in-out;
   position: fixed;
-  width: 30vw;
-  left: -30vw;
+  width: 7rem;
+  left: -7rem;
   height: 100%;
   z-index: 1;
 }
@@ -53,7 +53,7 @@ nav {
 .hamburger {
   position: absolute;
   top: 1rem;
-  right: -3rem;
+  right: -2.5rem;
 }
 
 .hamburger:hover {
@@ -95,8 +95,8 @@ nav {
   color: red;
   padding: 0.1rem 0.5rem;
   position: absolute;
-  top: 9rem;
-  left: 4rem;
+  margin-top: -1.2rem;
+  margin-left: 2rem;
 }
 
 .nav__menu {
@@ -181,6 +181,11 @@ img {
   text-align: center;
 }
 
+.shift .food__item {
+  margin-left: 7rem;
+  width: 60vw;
+}
+
 .food__item:hover {
   border-radius: 2rem;
   box-shadow: 0.05rem 0.05rem 1rem rgba(185, 184, 184, 0.6);
@@ -196,6 +201,7 @@ img {
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 550;
+  width: 120%;
 }
 
 button {
@@ -275,11 +281,6 @@ footer a {
     gap: 3rem;
   }
 
-  .item_number {
-    top: 0.16rem;
-    left: 29.5rem;
-  }
-
   .foods__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -303,10 +304,6 @@ footer a {
 
   .food__item {
     width: 20vw;
-  }
-
-  .item_number {
-    left: 57.5rem;
   }
 
   img {
