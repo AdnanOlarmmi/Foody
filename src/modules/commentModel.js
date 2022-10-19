@@ -1,21 +1,40 @@
 const modelContent = document.querySelector('.model__content');
+import { foodBaseUrl } from './config.js';
+
+
+
+foodBaseUrl.forEach( async (item) => {
+  // console.log(item)
+    const res = await fetch(item);
+    const data = await res.json();
+    if (!res.ok) {
+      foodContainerEl.innerHTML = 'Server Down';
+    }
+
+    const modelImg = document.querySelector('.model__img');
+    data.meals.forEach((items) => {
+      
+
+})
+})
+
+
 export const createXBtn = () => {
-const div = document.createElement('div');
-const xBtn = document.createElement('button');
-const span = document.createElement('span');
+  const div = document.createElement('div');
+  const xBtn = document.createElement('button');
+  const span = document.createElement('span');
 
-div.classList.add('model__container');
-span.classList.add('x__btn');
-xBtn.classList.add('close');
+  div.classList.add('model__container');
+  span.classList.add('x__btn');
+  xBtn.classList.add('close');
 
-span.innerHTML = '&times';
-xBtn.setAttribute('type', 'button');
+  span.innerHTML = '&times';
+  xBtn.setAttribute('type', 'button');
 
-xBtn.appendChild(span)
-div.appendChild(xBtn)
-return div;
-}
-
+  xBtn.appendChild(span);
+  div.appendChild(xBtn);
+  return div;
+};
 
 const createItemDetailsEl = () => {
   const divHead = document.createElement('div');
@@ -34,7 +53,7 @@ const createItemDetailsEl = () => {
   const span6 = document.createElement('span');
   const span7 = document.createElement('span');
   const span8 = document.createElement('span');
-  
+
   divHead.classList.add('model__head');
   modelImg.classList.add('model__img');
   modelName.classList.add('model__name');
@@ -48,10 +67,9 @@ const createItemDetailsEl = () => {
   span7.classList.add('span__content');
   span8.classList.add('span__content');
 
-  
   modelImg.setAttribute('src', '');
   modelImg.setAttribute('alt', 'Item1');
-  
+
   modelName.innerText = 'Item1';
   span1.innerText = 'Fuel: ';
   span2.innerText = 'Fuel: ';
@@ -61,28 +79,30 @@ const createItemDetailsEl = () => {
   span6.innerText = 'Titanium';
   span7.innerText = 'Titanium';
   span8.innerText = 'Titanium';
-  
+
   Li1.append(span1, span5);
   Li2.append(span2, span6);
   Li3.append(span3, span7);
   Li4.append(span4, span8);
-  modelUl.append(Li1, Li2, Li3, Li4)
-  divHead.append(modelImg, modelName, modelUl);
-  
+  modelUl.append(Li1, Li2, Li3, Li4);
+  divHead.append(modelName, modelUl);
+
   return divHead;
-}
+};
+
+
 
 const createCommentEl = () => {
   const postUl = document.createElement('ul');
   const postH2 = document.createElement('h2');
-  
+
   postUl.classList.add('post__comment');
   postH2.classList.add('post__comment__title');
-  
+
   postH2.innerText = 'Comments';
   postUl.append(postH2);
   return postUl;
-}
+};
 
 const createformEl = () => {
   const formDiv = document.createElement('div');
@@ -94,7 +114,7 @@ const createformEl = () => {
   const divMsg = document.createElement('div');
   const p1 = document.createElement('p');
   const p2 = document.createElement('p');
-  
+
   formDiv.classList.add('model__form');
   h3El.classList.add('form__title');
   formEl.classList.add('comment__form');
@@ -104,56 +124,60 @@ const createformEl = () => {
   divMsg.classList.add('message');
   p1.classList.add('success');
   p2.classList.add('danger');
-  
+
   input.setAttribute('type', 'text');
   input.setAttribute('placeholder', 'Your name');
   textarea.setAttribute('placeholder', 'insights');
   textarea.setAttribute('cols', '20');
   textarea.setAttribute('rows', '10');
   button.setAttribute('type', 'submit');
-  
+
   h3El.innerText = 'Add a comment';
   button.innerText = 'Comment';
   p1.innerText = 'Form successfully submited';
-  p2.innerText = 'Please fill in the form'
-  
+  p2.innerText = 'Please fill in the form';
+
   divMsg.append(p1, p2);
   formEl.append(input, textarea, button, divMsg);
   formDiv.append(h3El, formEl);
-  
-  return formDiv;
-}
 
+  return formDiv;
+};
 
 modelContent.append(
   createXBtn(),
   createItemDetailsEl(),
   createCommentEl(),
-  createformEl()
+  createformEl(),
 );
 
+createformEl()
 
 
 
-const ShowTriggerBtn = document.querySelector('.popbtn__trigger');
+setTimeout(() => {
+const modelWindow = () => {
 const closeBtn = document.querySelector('.x__btn');
-export const modelWindow = () => {
-  const model = document.querySelector('.model');
+const showPopup = document.querySelectorAll('.btn__trigger');
+showPopup.forEach((each) => {
 
-  ShowTriggerBtn.addEventListener('click', () => {
+  each.addEventListener('click', () => {
     model.classList.add('show');
+    console.log('clicked')
   });
+})
+const model = document.querySelector('.model');
 
   closeBtn.addEventListener('click', () => {
     model.classList.remove('show');
   });
 
   window.addEventListener('click', (e) => {
-    if(e.target === model) {
+    if (e.target === model) {
       model.classList.remove('show');
     }
   });
-}
-modelWindow()
-
+};
+modelWindow();
+}, 1000);
 

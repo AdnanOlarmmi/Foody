@@ -4,15 +4,16 @@ import itemsCounter from './modules/itemsCounter.js';
 import addLikes from './modules/addLikes.js';
 import renderFoodItems from './modules/renderFoodItems.js';
 
-import {formStatusMsg, modelWindow} from './modules/commentModel.js'
-import commentCounter from './modules/countComment.js'
-import { listComments, commentsContainer } from './modules/displayComments.js'
-import {getComments} from './modules/api.js'
+import { formStatusMsg, modelWindow } from './modules/commentModel.js';
+import commentCounter from './modules/countComment.js';
+import { listComments, commentsContainer } from './modules/displayComments.js';
+import getComments from './modules/api.js';
+// import { getImg, render } from './modules/commentModel.js'
 
 window.onload = async () => {
   listComments(await getComments());
-  commentCounter(await getComments())
-}
+  commentCounter(await getComments());
+};
 
 const foodContainerEl = document.querySelector('main');
 const hamburgerEl = document.querySelector('.hamburger');
@@ -42,22 +43,6 @@ foodContainerEl.addEventListener('click', async (e) => {
 renderLikes();
 renderFoodItems();
 toggleNav();
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
 
 // const ShowTriggerBtn = document.querySelector('.popbtn__trigger');
 // const closeBtn = document.querySelector('.x__btn');

@@ -170,6 +170,11 @@ img {
   width: 40vw;
   height: 50vw;
   margin: 0.7rem;
+  transition: 0.3s all ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
 }
 
 .food__icon {
@@ -351,7 +356,7 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 70rem;
+  width: 70%;
   margin: auto;
 }
 
