@@ -1,4 +1,5 @@
 import { commentBaseApi } from "./config.js";
+import getComments from "./getComments.js";
 
 
 const postComment = async (commentObj) => {
@@ -16,7 +17,9 @@ const postComment = async (commentObj) => {
         if (!res.ok) {
           console.log('Not Successful');
         }
-        console.log('success')
+        getComments(commentObj.item_id); 
+        
+        
       } catch (err) {
         console.log('Not Successful');
       }
