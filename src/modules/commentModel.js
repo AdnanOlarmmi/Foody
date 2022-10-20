@@ -1,4 +1,5 @@
 import { foodBaseUrl } from './config.js';
+import getComments from './getComments.js';
 const pop = document.querySelector('.pop-windo');
 
 const displayPop = (id) => {
@@ -23,9 +24,7 @@ const displayPop = (id) => {
           <div class="comment__container" id=${item.idMeal}>
              <h2>Comments</h2>
              <div class="comments">
-              <div class="comments__item">
-                  <p class="date"></p>
-                  <div class="comment"></div>   
+              <div class="comments__item">  
               </div>
              </div>
              <form action="">
@@ -35,16 +34,20 @@ const displayPop = (id) => {
              <button class="chat">Comment</button> 
           </div>
       </section>`
-      
+      pop.innerHTML = markup;
+        getComments(id) 
         }
-        pop.innerHTML = markup;
         
       })
-
+      
     } catch(err) {
         console.log(err)
       }
+      
+      
     })
+    
+    
 }
 
 export default displayPop;

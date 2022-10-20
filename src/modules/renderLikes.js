@@ -2,8 +2,7 @@ import { likeApiEndPoint } from './config.js';
 
 const likeCountEl = document.getElementsByClassName('like__count');
 
-const renderLikes = () => {
-  setTimeout(async () => {
+const renderLikes = async () => {
     try {
       const res = await fetch(likeApiEndPoint);
       const data = await res.json();
@@ -18,7 +17,6 @@ const renderLikes = () => {
     } catch (err) {
       likeCountEl.item = err;
     }
-  }, 1000);
 };
 
 export default renderLikes;

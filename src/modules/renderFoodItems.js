@@ -1,5 +1,6 @@
 import { foodBaseUrl } from './config.js';
-import getFoodItems from './getFoodItems.js';
+import renderLikes from './renderLikes.js';
+
 
 const foodContainerEl = document.querySelector('.foods__container');
 
@@ -33,6 +34,7 @@ const renderFoodItems = async () => {
             <button class="pop-window">See More</button>
             </section>`;
         foodContainerEl.innerHTML = markup;
+        renderLikes(item.idMeal);
       });
     } catch (err) {
       foodContainerEl.innerHTML = err;

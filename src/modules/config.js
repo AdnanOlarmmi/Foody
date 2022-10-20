@@ -1,6 +1,6 @@
 import foodItems from './foodItems.js';
 
-const commentApiKey = 'o3ZbADYRisQBifGzcDCQ';
+const commentApiKey = 'O0Itmyv3eikfhRODPWfL';
 const commentBaseApi = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${commentApiKey}/comments`;
 
 const likeKey = 'o3ZbADYRisQBifGzcDCQ';

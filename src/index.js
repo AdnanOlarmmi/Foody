@@ -7,7 +7,7 @@ import renderFoodItems from './modules/renderFoodItems.js';
 import displayPop from './modules/commentModel.js';
 import commentCounter from './modules/countComment.js';
 import { listComments, commentsContainer } from './modules/displayComments.js';
-import getComments from './modules/api.js';
+import getComments from './modules/getComments.js';
 import get from './modules/getFoodItems.js';
 import postComment from './modules/postComment.js';
 
@@ -43,6 +43,7 @@ foodContainerEl.addEventListener('click', async (e) => {
     const id = e.target.parentNode.childNodes[1].childNodes[3].id;
     console.log(id);
     displayPop(id);
+    
     pop.classList.add('slide');
 
     const formEl = document.querySelector('.comment-form');
@@ -51,16 +52,14 @@ foodContainerEl.addEventListener('click', async (e) => {
     pop.addEventListener('click', (e) => {
       if(e.target.className === 'chat') {
         e.preventDefault();
-        console.log('chat');
         const username = document.querySelector('input').value;
         const comment = document.querySelector('textarea').value;
-        let date = new Date().toLocaleDateString();
         
         const id = e.target.parentNode.id;
         const commentObj = {
-          user_id: 'item1',
+          item_id: id,
+          comment,
           username,
-          comment: [comment],
         };
         console.log(commentObj);
         postComment(commentObj);
@@ -73,7 +72,7 @@ foodContainerEl.addEventListener('click', async (e) => {
 });
 
 
-renderLikes();
+
 renderFoodItems();
 toggleNav();
 
