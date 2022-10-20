@@ -1,5 +1,6 @@
 import { foodBaseUrl } from './config.js';
 import getComments from './getComments.js';
+
 const pop = document.querySelector('.pop-windo');
 
 const displayPop = (id) => {
@@ -13,7 +14,7 @@ const displayPop = (id) => {
       }
 
       data.meals.forEach((item) => {
-        if(item.idMeal === id) {
+        if (item.idMeal === id) {
           markup += `
           <div class="model__container">
           <button class="close" type="button">
@@ -61,20 +62,15 @@ const displayPop = (id) => {
              </form>
              
           </div>
-      </section>`
-      pop.innerHTML = markup;
-        getComments(id) 
+      </section>`;
+          pop.innerHTML = markup;
+          getComments(id);
         }
-        
-      })
-      
-    } catch(err) {
-        console.log(err)
-      }
-      
-      
-    })
-}
-
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  });
+};
 
 export default displayPop;

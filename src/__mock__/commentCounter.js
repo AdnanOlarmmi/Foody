@@ -1,10 +1,11 @@
-const commentCounter = async () => {
-  const commentConnter = document.querySelectorAll('.post__comment');
-  const postCount = document.querySelector('.post__comment__title');
-  commentConnter.forEach((each) => {
-    const counter = each.children.length;
-    postCount.innerText += `(${counter})`
-  })
-};
+const commentMock = (data) => {
+  let count = 0;
 
-export default commentCounter;
+  if(data && data.length > 0){
+    count = data.length;
+  }
+return count;
+
+}
+
+export default commentMock;

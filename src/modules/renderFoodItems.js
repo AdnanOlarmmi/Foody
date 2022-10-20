@@ -1,7 +1,6 @@
 import { foodBaseUrl } from './config.js';
 import renderLikes from './renderLikes.js';
 
-
 const foodContainerEl = document.querySelector('.foods__container');
 
 const renderFoodItems = async () => {
@@ -14,8 +13,6 @@ const renderFoodItems = async () => {
       if (!res.ok) {
         foodContainerEl.innerHTML = 'Server Down';
       }
-
-       
 
       data.meals.forEach((item) => {
         markup += `

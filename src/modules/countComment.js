@@ -3,8 +3,8 @@ const commentCounter = async () => {
   const postCount = document.querySelector('.post__comment__title');
   commentConnter.forEach((each) => {
     const counter = each.children.length;
-    postCount.innerText += `(${counter})`
-  })
+    postCount.innerText += `(${counter})`;
+  });
 };
 
 export default commentCounter;
