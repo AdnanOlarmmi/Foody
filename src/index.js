@@ -5,11 +5,10 @@ import addLikes from './modules/addLikes.js';
 import renderFoodItems from './modules/renderFoodItems.js';
 
 import displayPop from './modules/commentModel.js';
-import commentCounter from './modules/countComment.js';
-import getComments from './modules/getComments.js';
-import get from './modules/getFoodItems.js';
+
 import postComment from './modules/postComment.js';
 
+const bodyEl = document.querySelector('body');
 const foodContainerEl = document.querySelector('main');
 const hamburgerEl = document.querySelector('.hamburger');
 const navEl = document.querySelector('nav');
@@ -38,31 +37,27 @@ foodContainerEl.addEventListener('click', async (e) => {
     const { id } = e.target.parentNode.childNodes[1].childNodes[3];
     displayPop(id);
 
-    pop.classList.add('slide');
+    setTimeout(() => {
+      pop.classList.add('slide');
+    }, 100);
+
     model.style.display = 'block';
 
     pop.addEventListener('click', (e) => {
       if (e.target.className === 'chat') {
         e.preventDefault();
-        const username = document.querySelector('input').value;
-        const comment = document.querySelector('textarea').value;
+        let username = document.querySelector('input').value;
+        let comment = document.querySelector('textarea').value;
         const successMsg = document.querySelector('.success');
         const dangerMsg = document.querySelector('.danger');
 
         if (username === '' || comment === '') {
           dangerMsg.style.display = 'block';
-          return false;
+          setTimeout(() => {
+            dangerMsg.style.display = 'none';
+          }, 1500);
+          return;
         }
-        setTimeout(() => {
-          username === '';
-          comment === '';
-        }, 2000);
-        successMsg.style.display = 'block';
-
-        setTimeout(() => {
-          dangerMsg.style.display = 'none';
-          successMsg.style.display = 'none';
-        }, 1000);
 
         const { id } = e.target.parentNode.parentNode;
         const commentObj = {
@@ -70,53 +65,32 @@ foodContainerEl.addEventListener('click', async (e) => {
           comment,
           username,
         };
-
-        console.log(commentObj);
         postComment(commentObj);
-        formValidation();
+
+        document.querySelector('input').value = '';
+        document.querySelector('textarea').value = '';
+
+        successMsg.style.display = 'block';
+
+        setTimeout(() => {
+          dangerMsg.style.display = 'none';
+          successMsg.style.display = 'none';
+          username = '';
+          comment = '';
+        }, 1000);
       }
     });
 
-    pop.addEventListener('click', (e) => {
-      if (e.target.className === 'x__btn') {
+    bodyEl.addEventListener('click', (e) => {
+      if (e.target.className === 'x__btn' || e.target.className === 'model') {
         pop.classList.remove('slide');
-        model.style.display = 'none';
-      }
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target.className === 'model') {
-        pop.classList.remove('slide');
-        model.style.display = 'none';
+        setTimeout(() => {
+          model.style.display = 'none';
+        }, 400);
       }
     });
   }
 });
 
-const formValidation = () => {
-  const form = document.querySelector('.comment__form');
-};
-
 renderFoodItems();
 toggleNav();
-
-// const ShowTriggerBtn = document.querySelector('.popbtn__trigger');
-// const closeBtn = document.querySelector('.x__btn');
-// const model = document.querySelector('.model');
-
-// const modelWindow = () => {
-//   ShowTriggerBtn.addEventListener('click', () => {
-//     model.classList.add('show');
-//   });
-
-//   closeBtn.addEventListener('click', () => {
-//     model.classList.remove('show');
-//   });
-
-//   window.addEventListener('click', (e) => {
-//     if(e.target === model) {
-//       model.classList.remove('show');
-//     }
-//   });
-// }
-// modelWindow()

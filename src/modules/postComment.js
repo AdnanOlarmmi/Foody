@@ -10,10 +10,14 @@ const postComment = async (commentObj) => {
       },
       body: JSON.stringify(commentObj),
     });
-    if (!res.ok) {
+    if (!res) {
+      return res;
     }
+
     getComments(commentObj.item_id);
+    return 'done';
   } catch (err) {
+    return err;
   }
 };
 

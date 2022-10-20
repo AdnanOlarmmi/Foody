@@ -1,10 +1,8 @@
 import { foodBaseUrl } from './config.js';
 import getComments from './getComments.js';
-import commentCounter from './countComment.js';
-import { forEach } from 'lodash';
 
-// const count = commentCounter()
 const pop = document.querySelector('.pop-windo');
+const foodContainerEl = document.querySelector('.foods__container');
 
 const displayPop = (id) => {
   let markup = '';
@@ -66,20 +64,12 @@ const displayPop = (id) => {
              
           </div>
       </section>`;
-
-      // const commentConnter = document.querySelectorAll('.listed__comment');
-      // commentConnter.forEach((each) => {
-            
-      //       console.log(each)
-      //     })
-
           pop.innerHTML = markup;
           getComments(id);
-          // commentCounter(id)
         }
       });
     } catch (err) {
-      console.log(err);
+      foodContainerEl.innerHTML = err;
     }
   });
 };

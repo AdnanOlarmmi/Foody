@@ -32,6 +32,7 @@ const renderFoodItems = async () => {
             </section>`;
         foodContainerEl.innerHTML = markup;
         renderLikes(item.idMeal);
+        return 'done';
       });
     } catch (err) {
       foodContainerEl.innerHTML = err;

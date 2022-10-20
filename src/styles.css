@@ -264,12 +264,6 @@ button:active {
   display: none;
 }
 
-.model__head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .model__name {
   text-align: center;
   font-weight: 500;
@@ -314,7 +308,6 @@ footer a {
   float: right;
   display: block;
   border: none;
-  background: none;
   position: relative;
   bottom: 10px;
   left: -50px;
@@ -418,10 +411,11 @@ footer {
 .pop-windo {
   display: block;
   position: fixed;
-  top: 50%;
-  left: -200%;
+  top: 200%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 90vw;
+  max-width: 32rem;
   height: 90vh;
   border-radius: 1rem;
   background-color: white;
@@ -430,12 +424,21 @@ footer {
   overflow-y: scroll;
 }
 
+textarea {
+  resize: none;
+}
+
+.chat {
+  width: max-content;
+  margin: 0 auto;
+}
+
 .pop-windo::-webkit-scrollbar {
   display: none;
 }
 
 .slide {
-  left: 50%;
+  top: 50%;
 }
 
 .food__description {
@@ -449,18 +452,7 @@ footer {
 
 /* pop */
 
-
 /* form message */
-
-@keyframes slideDown {
-  0% {
-    transform: scale(0.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
 
 .message {
   text-align: center;

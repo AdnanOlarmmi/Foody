@@ -10,17 +10,18 @@ const getComments = async (id) => {
     data.forEach((comment) => {
       markup += `
             <li class="listed__comment">
-            <span class="date">${comment.creation_date}</span>
-            <span class="name"> ${comment.username}</span>
+            <span class="date">${comment.creation_date} > </span>
+            <span class="name"> >  ${comment.username}:</span>
             <span class="comment">${comment.comment}</span>
             </li>
              `;
     });
     commentEl.innerHTML = markup;
+    commentCounter();
+    return 'done';
   } catch (err) {
-    console.log(err);
+    return err;
   }
-  commentCounter();
 };
 
 export default getComments;
