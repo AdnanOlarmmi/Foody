@@ -1,6 +1,9 @@
 import { foodBaseUrl } from './config.js';
 import getComments from './getComments.js';
+import commentCounter from './countComment.js';
+import { forEach } from 'lodash';
 
+// const count = commentCounter()
 const pop = document.querySelector('.pop-windo');
 
 const displayPop = (id) => {
@@ -46,7 +49,7 @@ const displayPop = (id) => {
           </div>
 
           <div class="comment__container" id=${item.idMeal}>
-          <h2 class="post__comment__title">Comments</h2>
+          <h2 class="post__comment__title">Comments<span></span></h2>
              <div class="comments">
               <div class="comments__item post__comment"> 
               </div>
@@ -63,8 +66,16 @@ const displayPop = (id) => {
              
           </div>
       </section>`;
+
+      // const commentConnter = document.querySelectorAll('.listed__comment');
+      // commentConnter.forEach((each) => {
+            
+      //       console.log(each)
+      //     })
+
           pop.innerHTML = markup;
           getComments(id);
+          // commentCounter(id)
         }
       });
     } catch (err) {
