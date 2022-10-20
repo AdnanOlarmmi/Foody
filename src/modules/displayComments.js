@@ -1,5 +1,5 @@
 export const commentsContainer = document.querySelector('.post__comment');
-console.log(commentsContainer)
+// console.log(commentsContainer)
 export const listComments = (post) => {
   if (!post) {
     commentsContainer.innerHTML = 'No post listed';

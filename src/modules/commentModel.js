@@ -13,23 +13,47 @@ const displayPop = (id) => {
       }
 
       data.meals.forEach((item) => {
+        console.log(item)
         if(item.idMeal === id) {
           markup += `
-          <div class="flex-column food__description">
+          <div class="model__container">
+          <button class="close" type="button">
+            <span class="x__btn">×</span>
+          </button>
+        </div>
+          <div class="flex-column food__description model__head">
+          
               <img class="img" src="${item.strMealThumb}" alt="">
-              <p class="food__information">
-                  ${item.strInstructions}
-              </p>
+              <h2 class="model__name">${item.strMeal}</h2>
+              <ul class="model__prop">
+                <li class="model__item">
+                  <span>Category: </span>
+                  <span class="span__content">${item.strCategory}</span>
+                </li>
+                  <li class="model__item">
+                    <span>Area: </span>
+                    <span class="span__content">${item.strArea}</span>
+                  </li>
+                  <li class="model__item">
+                    <span>Tags: </span>
+                    <span class="span__content">${item.strIngredient10}</span>
+                  </li>
+                  <li class="model__item">
+                    <span>Source: </span>
+                    <span class="span__content"><a href="${item.strYoutube}">YouTube</a></span>
+                  </li>
+                </ul>
           </div>
+
           <div class="comment__container" id=${item.idMeal}>
-             <h2>Comments</h2>
+          <h2 class="post__comment__title">Comments</h2>
              <div class="comments">
-              <div class="comments__item">  
+              <div class="comments__item post__comment"> 
               </div>
              </div>
-             <form action="">
-              <input type="text" name="" id="name">
-              <textarea name="" id="input" cols="30" rows="10"></textarea>
+             <form class="comment__form">
+              <input class="input__field" type="text" id="name" placeholder="Your name">
+              <textarea class="input__field" id="input" cols="30" rows="10" placeholder="Your insight"></textarea>
              <button class="chat">Comment</button> 
              </form>
              
@@ -47,8 +71,7 @@ const displayPop = (id) => {
       
       
     })
-    
-    
 }
+
 
 export default displayPop;

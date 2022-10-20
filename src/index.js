@@ -41,13 +41,11 @@ foodContainerEl.addEventListener('click', async (e) => {
   } else if (e.target.className ==='pop-window') {
 
     const id = e.target.parentNode.childNodes[1].childNodes[3].id;
-    console.log(id);
     displayPop(id);
     
     pop.classList.add('slide');
 
-    const formEl = document.querySelector('.comment-form');
-    console.log(formEl);
+
 
     pop.addEventListener('click', (e) => {
       if(e.target.className === 'chat') {
@@ -55,24 +53,27 @@ foodContainerEl.addEventListener('click', async (e) => {
         const username = document.querySelector('input').value;
         const comment = document.querySelector('textarea').value;
         
-        const id = e.target.parentNode.parentNode.parentNode.childNodes[3].id;
-        console.log(id);
+        const id = e.target.parentNode.parentNode.id;
         const commentObj = {
           item_id: id,
           comment,
           username,
         };
+
         console.log(commentObj);
         postComment(commentObj);
         
 
       }
     })
-    
+
+    pop.addEventListener('click', (e) => {
+      if(e.target.className === 'x__btn'){
+        pop.classList.remove('slide');
+      }
+    })
   }
 });
-
-
 
 renderFoodItems();
 toggleNav();
