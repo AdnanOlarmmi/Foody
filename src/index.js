@@ -55,7 +55,8 @@ foodContainerEl.addEventListener('click', async (e) => {
         const username = document.querySelector('input').value;
         const comment = document.querySelector('textarea').value;
         
-        const id = e.target.parentNode.id;
+        const id = e.target.parentNode.parentNode.parentNode.childNodes[3].id;
+        console.log(id);
         const commentObj = {
           item_id: id,
           comment,

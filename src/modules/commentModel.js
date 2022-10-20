@@ -29,9 +29,10 @@ const displayPop = (id) => {
              </div>
              <form action="">
               <input type="text" name="" id="name">
-             </form>
-             <textarea name="" id="input" cols="30" rows="10"></textarea>
+              <textarea name="" id="input" cols="30" rows="10"></textarea>
              <button class="chat">Comment</button> 
+             </form>
+             
           </div>
       </section>`
       pop.innerHTML = markup;
