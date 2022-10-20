@@ -35,6 +35,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "favicons-webpack-plugin": "^6.0.0-alpha.1",
     "lodash": "^4.17.21"
   },
   "main": "webpack.config.js",
