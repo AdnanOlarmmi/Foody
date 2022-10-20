@@ -4,16 +4,15 @@ import itemsCounter from './modules/itemsCounter.js';
 import addLikes from './modules/addLikes.js';
 import renderFoodItems from './modules/renderFoodItems.js';
 
-import { formStatusMsg, modelWindow } from './modules/commentModel.js';
+import displayPop from './modules/commentModel.js';
 import commentCounter from './modules/countComment.js';
 import { listComments, commentsContainer } from './modules/displayComments.js';
 import getComments from './modules/api.js';
-// import { getImg, render } from './modules/commentModel.js'
+import get from './modules/getFoodItems.js';
+import postComment from './modules/postComment.js';
 
-window.onload = async () => {
-  listComments(await getComments());
-  commentCounter(await getComments());
-};
+
+
 
 const foodContainerEl = document.querySelector('main');
 const hamburgerEl = document.querySelector('.hamburger');
@@ -33,16 +32,55 @@ const toggleNav = () => {
   });
 };
 
+const pop = document.querySelector('.pop-windo');
+
 foodContainerEl.addEventListener('click', async (e) => {
   if (e.target.className === 'icon__like') {
     await addLikes(e.target.parentNode.id);
     renderLikes();
+  } else if (e.target.className ==='pop-window') {
+
+    const id = e.target.parentNode.childNodes[1].childNodes[3].id;
+    console.log(id);
+    displayPop(id);
+    pop.classList.add('slide');
+
+    const formEl = document.querySelector('.comment-form');
+    console.log(formEl);
+
+    pop.addEventListener('click', (e) => {
+      if(e.target.className === 'chat') {
+        e.preventDefault();
+        console.log('chat');
+        const username = document.querySelector('input').value;
+        const comment = document.querySelector('textarea').value;
+        let date = new Date().toLocaleDateString();
+        
+        const id = e.target.parentNode.id;
+        const commentObj = {
+          user_id: 'item1',
+          username,
+          comment: [comment],
+        };
+        console.log(commentObj);
+        postComment(commentObj);
+        
+
+      }
+    })
+    
   }
 });
+
 
 renderLikes();
 renderFoodItems();
 toggleNav();
+
+
+
+
+
 
 // const ShowTriggerBtn = document.querySelector('.popbtn__trigger');
 // const closeBtn = document.querySelector('.x__btn');

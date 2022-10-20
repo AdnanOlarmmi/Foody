@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 :root {
@@ -244,8 +243,8 @@ button:active {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1.75rem;
-  margin: 0 auto;
   padding: 1rem;
+  place-items: center;
 }
 
 /* comment popUp */
@@ -302,7 +301,7 @@ button:active {
   font-weight: 400;
 }
 
-.show{
+.show {
   display: block;
 }
 
@@ -366,7 +365,7 @@ button:active {
   padding: 0.5rem;
   outline: none;
   border: none;
-  box-shadow: 0 0 0 1px rgb(217,217,217);;
+  box-shadow: 0 0 0 1px rgb(217, 217, 217);
   border-radius: 3px;
   letter-spacing: 0.03rem;
 }
@@ -396,6 +395,44 @@ footer a {
   color: red;
 }
 
+/* pop */
+
+.img {
+  object-fit: cover;
+  border-radius: 20px;
+  width: 90%;
+  height: 50%;
+  margin: 0.7rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.pop-windo {
+  position: fixed;
+  top: 50%;
+  left: -200%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  border-radius: 1rem;
+  background-color: white;
+  transition: 0.3s all ease-in-out;
+  padding: 1rem;
+}
+
+.slide {
+  left: 50%;
+}
+
+.food__description {
+  width: 50%;
+}
+
+.food__information {
+  width: 50%;
+}
+
+/* pop */
+
 
 /* form message */
 
@@ -409,7 +446,7 @@ footer a {
   }
 }
 
-.message {  
+.message {
   text-align: center;
   padding: 1rem;
   animation: slideDown 0.3s linear;
@@ -428,9 +465,6 @@ footer a {
 .danger {
   color: red;
 }
-
-
-
 
 @media only screen and (min-width: 768px) {
   body {

@@ -1,5 +1,8 @@
 import foodItems from './foodItems.js';
 
+const commentApiKey = 'o3ZbADYRisQBifGzcDCQ';
+const commentBaseApi = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${commentApiKey}/comments`;
+
 const likeKey = 'o3ZbADYRisQBifGzcDCQ';
 
 const likeURL = 'https://us-central1-involvement-api.cloudfunctions.net';
@@ -14,4 +17,4 @@ foodItems.forEach((item) => {
   foodBaseUrl.push(`${foodURL}=${item}`);
 });
 
-export { foodBaseUrl, likeApiEndPoint };
+export { foodBaseUrl, likeApiEndPoint, commentBaseApi };
