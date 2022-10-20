@@ -249,7 +249,7 @@ button:active {
 
 /* comment popUp */
 .model {
-  /* display: none; */
+  display: none;
   background-color: rgba(0, 255, 255, 0.633);
   backdrop-filter: blur(3px);
   height: 100vh;

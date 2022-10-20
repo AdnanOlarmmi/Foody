@@ -31,7 +31,7 @@ const toggleNav = () => {
     foodContainerEl.classList.toggle('shift');
   });
 };
-
+const model = document.querySelector('.model');
 const pop = document.querySelector('.pop-windo');
 
 foodContainerEl.addEventListener('click', async (e) => {
@@ -44,6 +44,8 @@ foodContainerEl.addEventListener('click', async (e) => {
     displayPop(id);
     
     pop.classList.add('slide');
+    model.style.display = 'block';
+
 
 
 
@@ -70,6 +72,7 @@ foodContainerEl.addEventListener('click', async (e) => {
     pop.addEventListener('click', (e) => {
       if(e.target.className === 'x__btn'){
         pop.classList.remove('slide');
+        model.style.display = 'none';
       }
     })
   }
