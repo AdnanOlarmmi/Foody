@@ -1,10 +1,6 @@
 import { commentBaseApi } from "./config.js"
 import commentCounter from './countComment.js';
 
-
-
-const commentEl = document.querySelector('.comments__item');
-console.log(commentEl)
 const getComments = async (id) => {
   const commentEl = document.querySelector('.comments__item');
     let markup = ''
@@ -15,10 +11,9 @@ const getComments = async (id) => {
             markup += `
             <li class="listed__comment">
             <span class="date">${comment.creation_date}</span>
-            <span class="name">${comment.username}</span>
+            <span class="name"> ${comment.username}</span>
             <span class="comment">${comment.comment}</span>
             </li>
-            
              `
         })
         commentEl.innerHTML = markup;

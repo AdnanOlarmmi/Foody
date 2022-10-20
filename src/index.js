@@ -54,6 +54,24 @@ foodContainerEl.addEventListener('click', async (e) => {
         e.preventDefault();
         const username = document.querySelector('input').value;
         const comment = document.querySelector('textarea').value;
+        const successMsg = document.querySelector('.success');
+        const dangerMsg = document.querySelector('.danger');
+
+        if(username === '' || comment === '') {
+          dangerMsg.style.display = 'block';
+          return false;
+        } else {
+          setTimeout(() => {
+            username === '';
+            comment === '';
+          }, 2000)
+          successMsg.style.display = 'block';
+        }
+        setTimeout(() => {
+          dangerMsg.style.display = 'none';
+          successMsg.style.display = 'none';
+        }, 1000)
+        
         
         const id = e.target.parentNode.parentNode.id;
         const commentObj = {
@@ -64,6 +82,7 @@ foodContainerEl.addEventListener('click', async (e) => {
 
         console.log(commentObj);
         postComment(commentObj);
+        formValidation()
         
 
       }
@@ -75,8 +94,20 @@ foodContainerEl.addEventListener('click', async (e) => {
         model.style.display = 'none';
       }
     })
+
+    window.addEventListener('click', (e) => {
+      if(e.target.className === 'model'){
+        pop.classList.remove('slide');
+        model.style.display = 'none';
+      }
+    })
   }
 });
+
+const formValidation = () => {
+  const form = document.querySelector('.comment__form');
+
+}
 
 renderFoodItems();
 toggleNav();

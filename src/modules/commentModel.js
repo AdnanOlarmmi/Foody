@@ -13,7 +13,6 @@ const displayPop = (id) => {
       }
 
       data.meals.forEach((item) => {
-        console.log(item)
         if(item.idMeal === id) {
           markup += `
           <div class="model__container">
@@ -55,6 +54,10 @@ const displayPop = (id) => {
               <input class="input__field" type="text" id="name" placeholder="Your name">
               <textarea class="input__field" id="input" cols="30" rows="10" placeholder="Your insight"></textarea>
              <button class="chat">Comment</button> 
+             <div class="message">
+             <p class="success">Form successfully submited</p>
+             <p class="danger">Please fill in the form</p>
+           </div>
              </form>
              
           </div>

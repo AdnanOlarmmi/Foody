@@ -250,7 +250,7 @@ button:active {
 /* comment popUp */
 .model {
   display: none;
-  background-color: rgba(0, 255, 255, 0.633);
+  background-color: rgba(255, 0, 0, 0.455);
   backdrop-filter: blur(3px);
   height: 100vh;
   width: 100%;
@@ -259,7 +259,7 @@ button:active {
   top: 0;
 }
 
-.model__content {
+model__content {
   background-color: rgb(255,255,255);
   width: 80vw;
   height: 95vh;
@@ -366,6 +366,9 @@ button:active {
   font-size: 15px;
   color: rgb(39,39,39);
   font-weight: 500;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* text-align: center; */
 }
 
 /* model form */
