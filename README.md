@@ -48,7 +48,7 @@ This project is to put to test the understanding of individual student on what t
 - CSS
 - JAVASCRIPT
 
-Click [here](https://www.loom.com/share/1b0968f84b46450fa426ca8cf6bd0d68) to watch a walk-through description, given by me.
+Click [here](https://www.loom.com/share/1b0968f84b46450fa426ca8cf6bd0d68) to watch a walk-through description, given myself and my awesome partner.
 
 ## Additional Tools
 
