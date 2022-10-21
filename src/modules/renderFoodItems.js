@@ -1,4 +1,5 @@
 import { foodBaseUrl } from './config.js';
+import renderLikes from './renderLikes.js';
 
 const foodContainerEl = document.querySelector('.foods__container');
 
@@ -27,9 +28,11 @@ const renderFoodItems = async () => {
             <img src="${item.strMealThumb}" alt="asdf"></div>
             <p class="food__name">${item.strMeal}</p>
             <p class="food__area">${item.strArea}</p>
-            <button>See More</button>
+            <button class="pop-window">See More</button>
             </section>`;
         foodContainerEl.innerHTML = markup;
+        renderLikes(item.idMeal);
+        return 'done';
       });
     } catch (err) {
       foodContainerEl.innerHTML = err;
