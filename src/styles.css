@@ -389,7 +389,12 @@ footer {
   align-items: center;
   justify-content: space-around;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.6rem;
+}
+
+.footer__brand span,
+.footer__brand b {
+  font-size: 1rem;
 }
 
 .creator {
