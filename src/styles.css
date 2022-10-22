@@ -257,6 +257,18 @@ button:active {
   top: 0;
 }
 
+<<<<<<< HEAD
+.model__content {
+  background-color: rgb(255,255,255);
+  width: 80vw;
+  height: 95vh;
+  margin: 1rem auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+=======
+>>>>>>> 40520d96b3ad49b3363e0ea0200f27facf29ed29
 .model__content::-webkit-scrollbar {
   display: none;
 }
@@ -363,7 +375,11 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 10px;
+<<<<<<< HEAD
+  width: 70rem;
+=======
   width: 70%;
+>>>>>>> 40520d96b3ad49b3363e0ea0200f27facf29ed29
   margin: auto;
   padding-top: 2rem;
 }
