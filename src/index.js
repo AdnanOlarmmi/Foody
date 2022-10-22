@@ -2,7 +2,7 @@ import './styles.css';
 import renderFoodItems from './modules/renderFoodItems.js'
 import renderLikes from './modules/renderLikes.js';
 
-import {likeApiEndPoint} from './modules/config.js'
+
 
 import addLikes from './modules/addLikes.js'
 
