@@ -72,33 +72,6 @@ const displayPop = (id) => {
       foodContainerEl.innerHTML = err;
     }
   });
-<<<<<<< HEAD
-}
-modelWindow()
-
-const inputName = document.querySelector('.comment__name')
-const inputComment = document.querySelector('.comment')
-const successMsg = document.querySelector('.success');
-const dangerMsg = document.querySelector('.danger');
-
-export const formStatusMsg = () => {
-  if(inputName.value === '' || inputComment.value === '') {
-    dangerMsg.style.display = 'block';
-  } else {
-    setTimeout(() => {
-      inputName.value = '';
-      inputComment.value === '';
-    }, 2000)
-    successMsg.style.display = 'block';
-  }
-
-  setTimeout(() => {
-    dangerMsg.style.display = 'none';
-    successMsg.style.display = 'none';
-  }, 1000)
-}
-=======
 };
 
 export default displayPop;
->>>>>>> cf923e438f538144830704e912e6c994a61d289c
