@@ -3,7 +3,7 @@
 
 # Capstone-II (FOODIE)
 
-This is a project acknowledging and affirming that I have properly understood everything learnt so far from the first module.
+A responsive and optimized restaurant web app that displays food items, interactive likes and comments for each particular food items.
 
 - Here is the page preview
 
