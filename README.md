@@ -89,7 +89,14 @@ git clone https://github.com/AdnanOlarmmi/Capstone-II.git
 ### Usage
 
 - After Cloning this repo to your local machine
-- Open the `index.html` in your browser
+- Download all the dependencies run:
+```
+npm install
+```
+- To get it running on your default browser and local host, run:
+```
+npm start
+```
 
 ### Run Tests
 To track linter errors locally follow these steps:  
