@@ -59,7 +59,7 @@ Click [here](https://drive.google.com/file/d/10jlVzfUTsPanuWBrkPkt3mns3-lkKOC-/v
 
 ## Live Demo
 
-[Here](https://adnanolarmmi.github.io/Capstone-II/) is the live demo.
+[Here](https://adnanolarmmi.github.io/Foodie/) is the live demo.
 
 ## Getting Started
 
@@ -79,7 +79,7 @@ To get a local copy of this project up and running on your local machine follow 
 - Clone this repository or download the Zip folder:
 
 ```
-git clone https://github.com/AdnanOlarmmi/Capstone-II.git
+git clone https://github.com/AdnanOlarmmi/Foodie.git
 ```
 
 - Navigate to the location of the folder in your machine:
@@ -151,7 +151,7 @@ npx eslint .
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/AdnanOlarmmi/Capstone-II/issues).
+Feel free to check the [issues page](https://github.com/AdnanOlarmmi/Foodie/issues).
 
 ## Show your support
 
