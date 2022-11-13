@@ -1,7 +1,7 @@
 # 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Capstone-II (FOODIE)
+# FOODIE
 
 A responsive and optimized restaurant web app that displays food items, interactive likes and comments for each particular food items.
 
