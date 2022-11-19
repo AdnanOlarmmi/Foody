@@ -84,7 +84,7 @@ git clone https://github.com/AdnanOlarmmi/Foody.git
 
 - Navigate to the location of the folder in your machine:
 
-**``you@your-Pc-name:~$ cd Capstone-II``**
+**``you@your-Pc-name:~$ cd Foody``**
 
 ### Usage
 
