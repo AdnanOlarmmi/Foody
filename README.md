@@ -1,139 +1,149 @@
-# 
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# FOODY
+<div align="center">
 
-A responsive and optimized restaurant web app that displays food items, interactive likes and comments for each particular food items.
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-- Here is the page preview
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👤 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
+
+# 📖 Foody <a name="about-project"></a>
+
+**Foody** is a responsive and optimized restaurant web app that displays food items, interactive likes and comments for each particular food items.
+.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML5</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS3</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</a></li>
+    <li><a href="https://webpack.js.org/">WebPack</a></li>
+  </ul>
+</details>
+
+### Key Features <a name="key-features"></a>
+
+- **Responsive Design.**
+- **Pixel Perfect design.**
+- **API Call.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Here is the link to the live experience](https://adnanolarmmi.github.io/Foody/).
 
 > |     | Mobile version                      | Desktop version                      |     |
 > | --- | ----------------------------------- | ------------------------------------ | --- |
-> |     | ![Screenshot1](./src/images/mobile.gif) | ![Screenshot2](./src/images/desktop.gif) |
+> |     | ![Screenshot1](./images/mobile.gif) | ![Screenshot2](./images/desktop.gif) |
 
-This project is to put to test the understanding of individual student on what they've studied so far from the curriculum's module 2.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-> Learning objectives
+## 💻 Getting Started <a name="getting-started"></a>
 
-- I Used semantic HTML tags.
-- I Applied best practices in HTML code.
-- Used CSS selectors correctly.
-- Used CSS box model.
-- Used Flexbox to place elements on the page.
-- Demonstrated ability to create UIs adaptable to different screen sizes using media queries.
-- Used GitHub Pages to deploy web pages.
-- Applied JavaScript best practices and language style guides in code.
-- Used JavaScript to manipulate DOM elements.
-- Used JavaScript events.
-- Used objects to store and access data.
-- Use JavaScript to make websites dynamic and build basic single page apps.
-- Use ES6 syntax.
-- Use ES6 modules.
-- Use callbacks and promises.
-- Use webpack.
-- Apply JavaScript best practices and language style guides in code.
-- Use AAA pattern for unit tests.
-- Write units tests for a JavaScript app.
-- Follow Gitflow.
-- Solve simple git conflicts.
-- Send and receive data from an API.
-- Use API documentation.
-- Understand and use JSON.
-- Make JavaScript code asynchronous.
-- Perform a code review for a team member.
-- Communicated technical concepts to other technical people.
-## Built With
-
-- HTML
-- CSS
-- JAVASCRIPT
-
-Click [here](https://drive.google.com/file/d/10jlVzfUTsPanuWBrkPkt3mns3-lkKOC-/view?usp=sharing) to watch a walk-through description, given myself and my awesome partner.
-
-## Additional Tools
-
-- WebHint
-- Stylelint
-- ESlint
-- Node Packet Manager
-
-## Live Demo
-
-[Here](https://adnanolarmmi.github.io/Foody/) is the live demo.
-
-## Getting Started
-
-To get a local copy of this project up and running on your local machine follow the steps below.
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-- Basic html, css and medium Javascript know how.
-- Git installation
-- A text editor 
-- A terminal
-- A web browser to view output e.g Google Chrome
-- An IDE e.g Visual studio code
+In order to run this project you need:
+
+- A web browser to view output e.g [Google Chrome](https://www.google.com/chrome/).
+- An IDE e.g [Visual studio code](https://code.visualstudio.com/).
+- `node` should be installed in your local machine, [node website](https://nodejs.org/en/download/).
+- Install the `npm` package manager use this [to install both node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+- [A terminal](https://code.visualstudio.com/docs/terminal/basics).
 
 ### Setup
 
-- Clone this repository or download the Zip folder:
+Clone this repository to your desired folder or download the Zip folder:
 
 ```
-git clone https://github.com/AdnanOlarmmi/Foody.git
+git clone https://github.com/AdnanOlarmmi/Leaderboard.git
 ```
 
 - Navigate to the location of the folder in your machine:
 
 **``you@your-Pc-name:~$ cd Foody``**
 
-### Usage
+### Install
 
-- After Cloning this repo to your local machine
-- Download all the dependencies run:
+To install all dependencies, run:
+
 ```
 npm install
 ```
+
+### Usage
+
+To run the project, follow these instructions:
+
+- After Cloning this repo to your local machine.
 - To get it running on your default browser and local host, run:
 ```
 npm start
 ```
 
-### Run Tests
-To track linter errors locally follow these steps:  
+### Run tests
 
-Download all the dependencies run:
-```
-npm install
-```
-Track HTML linter errors run:
+To run tests, run the following command:
+
+- Track HTML linter errors run:
 ```
 npx hint .
 ```
-Track CSS linter errors run:
+- Track CSS linter errors run:
 ```
 npx stylelint "**/*.{css,scss}"
 ```
-Track JavaScript linter errors run:
+- Track JavaScript linter errors run:
 ```
 npx eslint .
 ```
 
-### Deployment
+### Deployment <a name="deployment"></a>
 
-- I used GitHub Pages to deploy my website
-- For more information about publishing sources, see "[About github page](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#publishing-sources-for-github-pages-sites)"
+You can deploy this project using: GitHub Pages,
+- I used GitHub Pages to deploy my website.
+- For more information about publishing sources, see "[About GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#publishing-sources-for-github-pages-sites)".
 
-## Authors
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Author 1
+## 👥 Authors <a name="authors"></a>
 
-👤 **Is-haq Adnan Olamilekan**
+👤 **Is-haq, Adnan Olamilekan**
 
 - GitHub: [@AdnanOlarmmi](https://github.com/adnanolarmmi)
 - Twitter: [@AdnanIshaqOla](https://twitter.com/AdnanIshaqOla)
 - LinkedIn: [Adnan (Olamilekan) Is-haq](https://linkedin.com/in/adnan-is-haq-olamilekan)
-
-### Author 2
 
 👤 **Justice Bajeri**
 
@@ -141,29 +151,57 @@ npx eslint .
 - Twitter: [Link to Twitter Profile](https://twitter.com/Str_angeal)
 - LinkedIn: [Link to LinkedIn Profile](https://www.linkedin.com/in/justice-bajeri-0b7211243/)
 
-## Credits
 
-- The original design ideal by [Theme Forest](https://www.themeforest.net)
-- Project from [Microverse's](https://bit.ly/MicroverseTN) JavaScript and Networking Module
-- Api from [TheMealDB](https://www.themealdb.com/)
-- Topic inspired by [Microverse](https://www.microverse.org/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contributing
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Implement button to switch sort type (ascending or descending).**
+- [ ] **Implement search food feature.**
+- [ ] **Add different pages for different food types.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/AdnanOlarmmi/Foody/issues).
 
-## Show your support
+Feel free to check the [issues page](../../issues/).
 
-Give a ⭐️ if you like this project and how we manage to build it!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Acknowledgments
+## ⭐️ Show your support <a name="support"></a>
 
+
+Give a ⭐️ if you like this project and how I managed to build it!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- The original design ideal from Microverse💕.
+- Project from [Microverse](https://bit.ly/MicroverseTN) JavaScript module.
 - Thanks to the Microverse team for the great curriculum.
 - Thanks to the Code Reviewer(s) for the insightful feedbacks.
-- A great thanks to My coding partner, morning session team, and standup team for their contributions.
+- A great thanks to My coding partner(s), morning session team, and standup team for their contributions.
 - Hat tip to anyone whose code was used.
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This project is [MIT](LICENSE) licensed
+## ❓ FAQ <a name="faq"></a>
+
+- **Can I fork and reuse the repository**
+
+  - Yes please, feel free.
+
+- **Can I improve the repository, and my changes will be accepted if they are good?**
+
+  - Yes please, nice ideas are welcome, please.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
