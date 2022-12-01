@@ -87,7 +87,7 @@ In order to run this project you need:
 Clone this repository to your desired folder or download the Zip folder:
 
 ```
-git clone https://github.com/AdnanOlarmmi/Leaderboard.git
+git clone https://github.com/AdnanOlarmmi/Foody.git
 ```
 
 - Navigate to the location of the folder in your machine:
