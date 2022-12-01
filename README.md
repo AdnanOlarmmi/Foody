@@ -64,7 +64,7 @@
 
 > |     | Mobile version                      | Desktop version                      |     |
 > | --- | ----------------------------------- | ------------------------------------ | --- |
-> |     | ![Screenshot1](./images/mobile.gif) | ![Screenshot2](./images/desktop.gif) |
+> |     | ![Screenshot1](./src/images/mobile.gif) | ![Screenshot2](./src/images/desktop.gif) |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
